@@ -17,14 +17,19 @@ namespace ListViewSeparatorLinesExample
         public void FillListView()
         {
             var listOfRandom = new List<Random>();
-            for (int i = 0; i < 2; i++)
-            {
-                listOfRandom.Add(new Random
-                {
-                    Name = System.IO.Path.GetRandomFileName(),
-                    Detail = System.IO.Path.GetRandomFileName()
-                });
-            }
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    listOfRandom.Add(new Random
+            //    {
+            //        Name = System.IO.Path.GetRandomFileName(),
+            //        Detail = System.IO.Path.GetRandomFileName()
+            //    });
+            //}
+            listOfRandom.Add(new Random {Name = "Rodrigo Amaro", Detail="Pessoa Física" });
+            listOfRandom.Add(new Random { Name = "Rodrigo Ambrósio", Detail = "Pessoa Física" });
+
+            listOfRandom.Add(new Random { Name = "Juliana Pinto", Detail = "Pessoa Física" });
+            listOfRandom.Add(new Random { Name = "Juliana Santos", Detail = "Pessoa Jurídica" });
 
             var grouped = from r in listOfRandom
                           orderby r.Name
